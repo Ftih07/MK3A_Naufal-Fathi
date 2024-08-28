@@ -1,16 +1,29 @@
-document.getElementById('loginForm').addEventListener('submit', function(event){
-    event.preventDefault();
+        const wrapper = document.querySelector('.wrapper');
+        const registerLink = document.querySelector('.register-link');
+        const loginLink = document.querySelector('.login-link');
 
-    const correctUsername = "Anton";
-    const correctPassword = "Skibidi";
+        registerLink.onclick = () => {
+            wrapper.classList.add('active');
+        }
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+        loginLink.onclick = () => {
+            wrapper.classList.remove('active');
+        }
 
-    if(username == correctUsername && password == correctPassword){
-        alert("Login Berhasil")
-        window.location.href = 'index.html';
-    }else{
-        alert("Username atau password salah")
-    }
-});
+        // Login Form
+        document.getElementById('loginForm').addEventListener('submit', function(event){
+        event.preventDefault();
+
+        const correctUsername = "Anton";
+        const correctPassword = "Skibidi";
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if(username == correctUsername && password == correctPassword){
+            alert("Login Berhasil")
+            window.location.href = 'index.html';
+        }else{
+            alert("Username atau password salah")
+        }
+    });
