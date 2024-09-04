@@ -22,7 +22,7 @@
 
         if(username == correctUsername && password == correctPassword){
             alert("Login Berhasil")
-            window.location.href = 'index.html';
+            window.location.href = 'home.html';
         }else{
             alert("Username atau password salah")
         }
